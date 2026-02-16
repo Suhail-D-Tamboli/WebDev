@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>12 a Practice</title>
+    </head>
+    <body>
+
+        <button class="start-button" onclick="
+            finished()
+            ">Start</button>
+
+        <button class="cart-button" onclick="cart()">
+            Add To Cart
+        </button>
+
+        <p class="cart-paragraph"></p>
+        <script>
+            const add = function add1(){
+                console.log(2 + 3);
+            }
+            add();
+            add();
+
+
+            function runTwice(fun){
+                fun();
+            }
+            runTwice(function(){
+                console.log('12b');
+            });
+            runTwice(function(){
+                console.log(2 + 3);
+            });
+
+            // function finished(){
+            //     const inputElement = document.querySelector('.start-button');
+            //     if(inputElement.innerHTML === 'Start'){
+            //         inputElement.innerHTML = 'Finished';
+            //     }else{
+            //         inputElement.innerHTML = 'Start';
+            //     }
+                
+            // }
+
+
+        function finished(){
+                const inputElement = document.querySelector('.start-button');
+                inputElement.innerHTML = 'Loading...';
+                setTimeout(function(){                                
+                inputElement.innerHTML = 'Finished!';                                   
+                
+            },1000);
+        }
+
+        function cart(){
+            
+            const messageElement = document.querySelector('.cart-paragraph');
+            messageElement.innerHTML = 'Added';
+            setTimeout(function(){
+                messageElement.innerHTML = '';
+            },2000)
+
+        }
+            
+
+
+        </script>
+    </body>
+</html>
